@@ -1,8 +1,10 @@
 <script>
     let path = location.pathname.replace('/premedicaladmission', '')
     localStorage.setItem('path', path)
-    if (path.includes('ranking') || path.includes('mcq')) {
+    if (path.includes('ranking')) {
         window.location.href = '../'
+    } else if (path.includes('mcq')) {
+        window.location.href = '../../'
     } else {
         window.location.href = './'
     }
